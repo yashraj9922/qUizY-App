@@ -1,8 +1,8 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
 
-class btmNavBar extends StatelessWidget {
-  const btmNavBar({super.key});
+class BtmNavBar extends StatelessWidget {
+  const BtmNavBar({super.key});
 
   Widget build(BuildContext context) {
     return Container(
