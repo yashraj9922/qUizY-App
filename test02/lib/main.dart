@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:try_2/options.dart';
 import 'package:try_2/questionBox.dart';
@@ -14,20 +16,23 @@ class QuizApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Center(child: Text("qUizY")),
+          backgroundColor: Color.fromARGB(255, 0, 45, 71),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              const SizedBox(height: 100),
+        backgroundColor: Color.fromARGB(255, 0, 132, 161),
+        // backgroundColor: const Color.fromARGB(255, 255, 213, 0),
+        body: Column(
+            children: const [
+              SizedBox(height: 200),
+              // Image.asset('images/questionMark.jpeg'),
+              // const SizedBox(height: 5),
               QuestionBox(),
-              const SizedBox(height: 30),
+              SizedBox(height: 30),
               Options(),
             ],
-          ),
+          
         ),
         bottomNavigationBar: const BtmNavBar(),
-      ),
+        ),
     );
   }
 }
