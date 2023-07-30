@@ -14,7 +14,7 @@ class QuestionBox extends StatelessWidget {
             width: 365.0, // Adjust the width as needed
             height: 170.0, // Adjust the height as needed
             decoration: BoxDecoration(
-              color: Color.fromARGB(255, 241, 201, 201),
+              color: const Color.fromARGB(255, 241, 201, 201),
               borderRadius:
                   BorderRadius.circular(10.0), // Adjust the radius as needed
               border: Border.all(
