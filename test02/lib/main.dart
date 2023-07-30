@@ -20,18 +20,17 @@ class QuizApp extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 0, 132, 161),
         // backgroundColor: const Color.fromARGB(255, 255, 213, 0),
         body: Column(
-            children: const [
-              SizedBox(height: 200),
-              // Image.asset('images/questionMark.jpeg'),
-              // const SizedBox(height: 5),
-              QuestionBox(),
-              SizedBox(height: 30),
-              Options(),
-            ],
-          
+          children: const [
+            SizedBox(height: 200),
+            // Image.asset('images/questionMark.jpeg'),
+            // const SizedBox(height: 5),
+            QuestionBox(),
+            SizedBox(height: 30),
+            Options(),
+          ],
         ),
         bottomNavigationBar: const BtmNavBar(),
-        ),
+      ),
     );
   }
 }

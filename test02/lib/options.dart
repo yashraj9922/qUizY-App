@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Options extends StatelessWidget {
-  const Options({Key? key});
+  const Options({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +17,14 @@ class Options extends StatelessWidget {
                     const Color.fromARGB(255, 4, 172, 113)),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(23.0), // Increase the value as needed
+                    borderRadius: BorderRadius.circular(
+                        23.0), // Increase the value as needed
                   ),
                 ),
                 padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                  const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0), // Adjust the values as needed
+                  const EdgeInsets.symmetric(
+                      vertical: 20.0,
+                      horizontal: 50.0), // Adjust the values as needed
                 ),
               ),
               child: const Text("Option 1"),
@@ -34,11 +36,14 @@ class Options extends StatelessWidget {
                     const Color.fromARGB(255, 4, 172, 113)),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(23.0), // Increase the value as needed
+                    borderRadius: BorderRadius.circular(
+                        23.0), // Increase the value as needed
                   ),
                 ),
                 padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                  const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0), // Adjust the values as needed
+                  const EdgeInsets.symmetric(
+                      vertical: 20.0,
+                      horizontal: 50.0), // Adjust the values as needed
                 ),
               ),
               child: const Text("Option 2"),
@@ -56,11 +61,14 @@ class Options extends StatelessWidget {
                     const Color.fromARGB(255, 4, 172, 113)),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(23.0), // Increase the value as needed
+                    borderRadius: BorderRadius.circular(
+                        23.0), // Increase the value as needed
                   ),
                 ),
                 padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                  const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0), // Adjust the values as needed
+                  const EdgeInsets.symmetric(
+                      vertical: 20.0,
+                      horizontal: 50.0), // Adjust the values as needed
                 ),
               ),
               child: const Text("Option 3"),
@@ -72,11 +80,14 @@ class Options extends StatelessWidget {
                     const Color.fromARGB(255, 4, 172, 113)),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(23.0), // Increase the value as needed
+                    borderRadius: BorderRadius.circular(
+                        23.0), // Increase the value as needed
                   ),
                 ),
                 padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                  const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0), // Adjust the values as needed
+                  const EdgeInsets.symmetric(
+                      vertical: 20.0,
+                      horizontal: 50.0), // Adjust the values as needed
                 ),
               ),
               child: const Text("Option 4"),
