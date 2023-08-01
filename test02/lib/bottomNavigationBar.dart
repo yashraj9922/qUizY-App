@@ -1,4 +1,3 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
 
 class BtmNavBar extends StatelessWidget {
@@ -19,8 +18,8 @@ class BtmNavBar extends StatelessWidget {
               ),
               backgroundColor: const Color.fromARGB(198, 148, 15, 15),
               padding: const EdgeInsets.symmetric(
-                vertical: 14.0, // Increase the vertical padding as needed
-                horizontal: 22.0, // Increase the horizontal padding as needed
+                vertical: 14.0,
+                horizontal: 22.0,
               ),
             ),
             child: const Text("Back"),
@@ -33,8 +32,8 @@ class BtmNavBar extends StatelessWidget {
               ),
               backgroundColor: const Color.fromARGB(198, 148, 15, 15),
               padding: const EdgeInsets.symmetric(
-                vertical: 14.0, // Increase the vertical padding as needed
-                horizontal: 22.0, // Increase the horizontal padding as needed
+                vertical: 14.0,
+                horizontal: 22.0,
               ),
             ),
             child: const Text("Next"),

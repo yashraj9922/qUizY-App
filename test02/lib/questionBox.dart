@@ -5,6 +5,12 @@ class QuestionBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var questions = [
+      'Question 1',
+      'Question 2',
+      'Question 3'
+    ]; //need to start accessing different items in the list
+    // var currentIndex = 0;
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -21,10 +27,10 @@ class QuestionBox extends StatelessWidget {
               //   width: 2.0, // Border width
               // ),
             ),
-            child: const Center(
+            child: Center(
               child: Text(
-                'Question',
-                style: TextStyle(
+                questions[0],
+                style: const TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.normal,
                   color: Color.fromARGB(255, 0, 0, 0), // Text color
