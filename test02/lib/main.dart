@@ -14,10 +14,14 @@ class QuizApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Center(child: Text("qUizY")),
-          backgroundColor: Color.fromARGB(255, 0, 45, 71),
+          title: const Center(
+              child: Text(
+            "qUizY",
+            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+          )),
+          backgroundColor: Color.fromARGB(255, 210, 220, 223),
         ),
-        backgroundColor: Color.fromARGB(255, 0, 132, 161),
+        backgroundColor: Color.fromARGB(255, 210, 220, 223),
         // backgroundColor: const Color.fromARGB(255, 255, 213, 0),
         body: Column(
           children: const [

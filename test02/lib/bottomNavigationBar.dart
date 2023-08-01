@@ -6,43 +6,40 @@ class BtmNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: const Color.fromARGB(255, 0, 132, 161),
-      child: Padding(
-        padding: const EdgeInsets.all(5.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12.0),
-                ),
-                backgroundColor: const Color.fromARGB(198, 148, 15, 15),
-                padding: const EdgeInsets.symmetric(
-                  vertical: 16.0, // Increase the vertical padding as needed
-                  horizontal: 24.0, // Increase the horizontal padding as needed
-                ),
+    return Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
               ),
-              child: const Text("Back"),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12.0),
-                ),
-                backgroundColor: Color.fromARGB(198, 148, 15, 15),
-                padding: const EdgeInsets.symmetric(
-                  vertical: 16.0, // Increase the vertical padding as needed
-                  horizontal: 24.0, // Increase the horizontal padding as needed
-                ),
+              backgroundColor: const Color.fromARGB(198, 148, 15, 15),
+              padding: const EdgeInsets.symmetric(
+                vertical: 14.0, // Increase the vertical padding as needed
+                horizontal: 22.0, // Increase the horizontal padding as needed
               ),
-              child: const Text("Next"),
             ),
-          ],
-        ),
+            child: const Text("Back"),
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              backgroundColor: const Color.fromARGB(198, 148, 15, 15),
+              padding: const EdgeInsets.symmetric(
+                vertical: 14.0, // Increase the vertical padding as needed
+                horizontal: 22.0, // Increase the horizontal padding as needed
+              ),
+            ),
+            child: const Text("Next"),
+          ),
+        ],
       ),
     );
   }
