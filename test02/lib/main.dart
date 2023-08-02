@@ -1,6 +1,5 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unused_import
 import 'dart:isolate';
-
 import 'package:flutter/material.dart';
 import 'package:try_2/options.dart';
 import 'package:try_2/questionBox.dart';
