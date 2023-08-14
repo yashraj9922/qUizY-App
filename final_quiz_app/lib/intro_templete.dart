@@ -8,16 +8,16 @@ class IntroTemplete extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset("assets/images/quiz-logo.png"),
-        const SizedBox(height: 30),
         const Text(
-          "? ? qUizY-app ? ?",
+          ".?!.qUizY.!?.",
           style: TextStyle(
             color: Color.fromARGB(255, 10, 76, 115),
             fontSize: 30,
             fontWeight: FontWeight.bold,
           ),
         ),
+        const SizedBox(height: 30),
+        Image.asset("assets/images/quiz-logo.png"),
         const SizedBox(height: 30),
         TextButton(
           onPressed: null,
