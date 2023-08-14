@@ -1,4 +1,4 @@
-import 'package:final__quiz_app/intro_templete.dart';
+import 'package:final__quiz_app/introPage/intro_templete.dart';
 import 'package:flutter/material.dart';
 
 class IntroPage extends StatelessWidget {

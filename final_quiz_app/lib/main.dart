@@ -1,4 +1,4 @@
-import 'package:final__quiz_app/intro_page.dart';
+import 'package:final__quiz_app/introPage/intro_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
