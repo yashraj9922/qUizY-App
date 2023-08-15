@@ -19,7 +19,7 @@ class IntroTemplete extends StatelessWidget {
         const SizedBox(height: 30),
         Image.asset("assets/images/quiz-logo.png"),
         const SizedBox(height: 60),
-        TextButton(
+        TextButton.icon(
           onPressed: null,
           style: TextButton.styleFrom(
             backgroundColor: const Color.fromARGB(255, 187, 218, 231),
@@ -31,13 +31,16 @@ class IntroTemplete extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(15)),
             ),
           ),
-          child: const Text(
+          // child: const Text(
+          label: const Text(
             "Start Quiz",
             style: TextStyle(
               color: Color.fromARGB(255, 10, 76, 115),
               fontSize: 15,
             ),
           ),
+          icon: const Icon(Icons.rocket_launch_sharp),
+          // icon: const Icon(Icons.play_arrow),
         ),
       ],
     );
