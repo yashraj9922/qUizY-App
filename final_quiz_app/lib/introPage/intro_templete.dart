@@ -17,7 +17,16 @@ class IntroTemplete extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 30),
-        Image.asset("assets/images/quiz-logo.png"),
+        Image.asset(
+          "assets/images/quiz-logo.png",
+        color: const Color.fromARGB(116, 255, 255, 255),
+        ),
+        // const SizedBox(height: 60),
+        // Opacity(
+        //   //--> performance incentive approach/ opacity widget
+        //   opacity: 0.45,
+        //   child: Image.asset("assets/images/quiz-logo.png"),
+        // ),
         const SizedBox(height: 60),
         TextButton.icon(
           onPressed: null,
