@@ -1,3 +1,4 @@
+import 'package:final__quiz_app/question_screen.dart';
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
@@ -27,7 +28,7 @@ class StartScreen extends StatelessWidget {
         const SizedBox(height: 30),
         Image.asset(
           "assets/images/quiz-logo.png",
-          color: const Color.fromARGB(116, 255, 255, 255),
+          color:const Color.fromARGB(126, 255, 255, 255),
         ),
         // const SizedBox(height: 60),
         // Opacity(
@@ -38,7 +39,7 @@ class StartScreen extends StatelessWidget {
         const SizedBox(height: 60),
         TextButton.icon(
           onPressed: () {
-            //....
+            QuestionScreen;
           },
           style: TextButton.styleFrom(
             backgroundColor: const Color.fromARGB(255, 187, 218, 231),
