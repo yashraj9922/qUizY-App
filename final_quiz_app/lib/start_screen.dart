@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 
-class IntroTemplete extends StatelessWidget {
-  const IntroTemplete({super.key});
+class StartScreen extends StatelessWidget {
+  const StartScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Container(
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Color.fromARGB(255, 29, 138, 174), Colors.white],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        ),
+      ),
+      child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text(
@@ -19,7 +27,7 @@ class IntroTemplete extends StatelessWidget {
         const SizedBox(height: 30),
         Image.asset(
           "assets/images/quiz-logo.png",
-        color: const Color.fromARGB(116, 255, 255, 255),
+          color: const Color.fromARGB(116, 255, 255, 255),
         ),
         // const SizedBox(height: 60),
         // Opacity(
@@ -29,7 +37,9 @@ class IntroTemplete extends StatelessWidget {
         // ),
         const SizedBox(height: 60),
         TextButton.icon(
-          onPressed: null,
+          onPressed: () {
+            //....
+          },
           style: TextButton.styleFrom(
             backgroundColor: const Color.fromARGB(255, 187, 218, 231),
             padding: const EdgeInsets.symmetric(
@@ -52,6 +62,7 @@ class IntroTemplete extends StatelessWidget {
           // icon: const Icon(Icons.play_arrow),
         ),
       ],
+    ),
     );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:final__quiz_app/introPage/intro_page.dart';
+import 'package:final__quiz_app/start_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -6,7 +6,7 @@ void main() {
     const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: IntroPage(),
+        body: StartScreen(),
       ),
     ),
   );
