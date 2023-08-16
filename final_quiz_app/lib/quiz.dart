@@ -13,7 +13,15 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-  Widget activeScreen = const StartScreen();
+  Widget? activeScreen;// ? --> Widget or null
+
+  @override
+  void initState() {
+    activeScreen = StartScreen(switchScreen);
+    super.initState();
+  }
+  // Widget activeScreen = StartScreen(switchScreen);
+  //Both the variables and method  creation happens at the same point of time(i.e., simultaneously) --> when the class is instantiated
 
   void switchScreen() {
     setState(() {

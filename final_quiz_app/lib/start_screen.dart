@@ -1,8 +1,10 @@
-import 'package:final__quiz_app/question_screen.dart';
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  const StartScreen(this.startQuiz,
+      {super.key}); //adding switchScreen function as positional argument
+//arguments accepted in constructor function is not used in build method
+  final void Function() startQuiz;
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +32,10 @@ class StartScreen extends StatelessWidget {
         // ),
         const SizedBox(height: 60),
         TextButton.icon(
-          onPressed: () {
-            QuestionScreen;
-          },
+          onPressed: startQuiz,
+          // onPressed: () {
+          //   startQuiz();
+          // },
           style: TextButton.styleFrom(
             backgroundColor: const Color.fromARGB(255, 187, 218, 231),
             padding: const EdgeInsets.symmetric(
