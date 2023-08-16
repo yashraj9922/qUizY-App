@@ -6,15 +6,7 @@ class StartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Color.fromARGB(255, 29, 138, 174), Colors.white],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        ),
-      ),
-      child: Column(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text(
@@ -28,7 +20,7 @@ class StartScreen extends StatelessWidget {
         const SizedBox(height: 30),
         Image.asset(
           "assets/images/quiz-logo.png",
-          color:const Color.fromARGB(126, 255, 255, 255),
+          color: const Color.fromARGB(126, 255, 255, 255),
         ),
         // const SizedBox(height: 60),
         // Opacity(
@@ -63,7 +55,6 @@ class StartScreen extends StatelessWidget {
           // icon: const Icon(Icons.play_arrow),
         ),
       ],
-    ),
     );
   }
 }
