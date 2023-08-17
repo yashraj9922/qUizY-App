@@ -13,7 +13,7 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-  Widget? activeScreen;// ? --> Widget or null
+  Widget? activeScreen; // ? --> Widget or null
 
   @override
   void initState() {
