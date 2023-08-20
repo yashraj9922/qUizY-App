@@ -33,6 +33,11 @@ class _QuizState extends State<Quiz> {
     });
   }
 
+  var selectedAnswers = [];
+  void chooseAnswer(String clickedAnswer) {
+    selectedAnswers.add(clickedAnswer);
+  }
+
   @override
   Widget build(context) {
     // Widget screenWidget = StartScreen(switchScreen);
@@ -53,7 +58,7 @@ class _QuizState extends State<Quiz> {
           // child: activeScreen,--> init state widget
           child: activeScreen == 'start-screen'
               ? StartScreen(switchScreen)
-              : const QuestionScreen(),
+              : QuestionScreen(onChooseAnswer: chooseAnswer),
         ),
       ),
     );

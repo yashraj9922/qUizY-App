@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class QuestionScreen extends StatefulWidget {
-  const QuestionScreen({super.key});
+  const QuestionScreen({super.key, required this.onChooseAnswer});
+
+  final void Function(String clickedAnswer) onChooseAnswer;
 
   @override
   State<QuestionScreen> createState() {
