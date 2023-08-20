@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen(this.startQuiz,
@@ -11,12 +12,14 @@ class StartScreen extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text(
-          ".?!.qUizY.!?.",
-          style: TextStyle(
-            color: Color.fromARGB(255, 10, 76, 115),
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
+        Text(
+          "q U i z Y",
+          style: GoogleFonts.audiowide(
+            textStyle: const TextStyle(
+              color: Color.fromARGB(255, 10, 76, 115),
+              fontSize: 35,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         const SizedBox(height: 30),
