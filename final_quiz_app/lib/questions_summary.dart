@@ -17,7 +17,7 @@ class QuestionsSummary extends StatelessWidget {
                 //expands a child of a Row, Column, or Flex so that the child fills the available space
                 child: Column(
                   children: [
-                    Text(data['questions'] as String),
+                    Text(data['questions']/*accessing map values by keys*/ as String),
                     const SizedBox(height: 5),
                     Text(data['correct_answer'] as String),
                     Text(data['user_answers'] as String),

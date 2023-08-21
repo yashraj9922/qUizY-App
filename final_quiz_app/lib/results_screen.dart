@@ -26,6 +26,12 @@ class ResultsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final summaryData = getAnswerSummary();
+    final numTotalQuestions = questions.length;
+    final numCorrectAnswers = summaryData.where((data) {
+      return data['user_answers'] == data['correct_answer'];
+    }).length;
+
     return SizedBox(
       width: double
           .infinity, //use as much width as u can..be as much wide as possible
@@ -35,12 +41,12 @@ class ResultsScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "You answerd X out of Y answers correctly!",
+              "You answerd $numCorrectAnswers out of $numTotalQuestions answers correctly!",
               textAlign: TextAlign.center,
               style: GoogleFonts.lato(
                 textStyle: const TextStyle(
                   color: Color.fromARGB(255, 4, 54, 83),
-                  fontSize: 15,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
               ),
