@@ -1,4 +1,5 @@
 // This is main Widget which manages the whole quiz
+import 'package:final__quiz_app/data/questions.dart';
 import 'package:final__quiz_app/question_screen.dart';
 import 'package:final__quiz_app/start_screen.dart';
 import 'package:flutter/material.dart';
@@ -33,9 +34,18 @@ class _QuizState extends State<Quiz> {
     });
   }
 
-  var selectedAnswers = [];
+  // final List<String> selectedAnswers = []; --> need to reset the list to empty list after the quiz is over
+  List<String> selectedAnswers = [];
   void chooseAnswer(String clickedAnswer) {
     selectedAnswers.add(clickedAnswer);
+
+    if (selectedAnswers.length == questions.length) {
+      setState(() {
+        selectedAnswers = []; //once we are exhausted with the questions resetting the list to empty list
+        activeScreen = 'start-screen';
+        //need to reset the selectedAnswers list to empty list so that it can be used again
+      });
+    }
   }
 
   @override

@@ -7,7 +7,8 @@ class QuestionScreen extends StatefulWidget {
   const QuestionScreen({super.key, required this.onChooseAnswer});
 
   final void Function(String clickedAnswer) onChooseAnswer;
-
+  // final void Function(String clickedAnswer) onChooseAnswer;--> this is function present in widget class i need to acess it into State class
+  //insnstance variable.... widget.onChooseAnswer--> this is how we access instance variable of widget class into state class
   @override
   State<QuestionScreen> createState() {
     return _QuestionScreenState();
@@ -16,7 +17,9 @@ class QuestionScreen extends StatefulWidget {
 
 class _QuestionScreenState extends State<QuestionScreen> {
   var currentQuestionIdx = 0;
-  void answeringQuestion() {
+
+  void answeringQuestion(String clickedAnswer) {
+    widget.onChooseAnswer(clickedAnswer);
     setState(() {
       currentQuestionIdx++;
     });
@@ -53,8 +56,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
             ...currentQuestion.getShuffledAnswers().map((item) {
               return AnswerButton(
                 item,
-                onTap: () {
-                  answeringQuestion();
+                onTap:(){
+                  answeringQuestion(item);
                 },
               ); //converting list of String TO AnswerButton widget
             }), //map does not change the original list instead it returns a new list full of new objects
