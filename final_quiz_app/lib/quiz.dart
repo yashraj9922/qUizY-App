@@ -43,8 +43,7 @@ class _QuizState extends State<Quiz> {
     if (selectedAnswers.length == questions.length) {
       setState(
         () {
-          selectedAnswers =
-              []; //once we are exhausted with the questions resetting the list to empty list
+          // selectedAnswers = []; //once we are exhausted with the questions resetting the list to empty list
           activeScreen = 'results-screen';
           //need to reset the selectedAnswers list to empty list so that it can be used again
         },

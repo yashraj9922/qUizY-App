@@ -1,4 +1,5 @@
 import 'package:final__quiz_app/data/questions.dart';
+import 'package:final__quiz_app/questions_summary.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,7 +15,7 @@ class ResultsScreen extends StatelessWidget {
       summary.add(
         {
           'question_index': i,
-          'questions': questions[i],
+          'questions': questions[i].questionText,
           'correct_answer': questions[i].answers[0],
           'user_answers': selectedAnswer[i],
         },
@@ -45,7 +46,9 @@ class ResultsScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 30),
-            const Text("List of Answers and Questions"),
+            QuestionsSummary(
+              getAnswerSummary(),
+            ),
             const SizedBox(height: 30),
             TextButton.icon(
               onPressed: null,

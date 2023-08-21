@@ -1,4 +1,5 @@
 import 'package:final__quiz_app/modals/quiz_question.dart';
+
 //first option of every question is correct answer...hence do not shuffle this original list instead create a copt and then shuffle it
 const questions = [
   QuizQuestion(
