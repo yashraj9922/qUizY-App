@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ResultsScreen extends StatelessWidget {
-  const ResultsScreen({super.key, required this.selectedAnswer});
+  const ResultsScreen(
+      {super.key, required this.selectedAnswer, required this.onRestart});
 
   final List<String> selectedAnswer;
+  final void Function() onRestart;
 
   List<Map<String, Object>> getAnswerSummary() {
     final List<Map<String, Object>> summary = [];
@@ -51,13 +53,13 @@ class ResultsScreen extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 50),
             QuestionsSummary(
               getAnswerSummary(),
             ),
-            const SizedBox(height: 30),
+            const SizedBox(height: 70),
             TextButton.icon(
-              onPressed: null,
+              onPressed: onRestart,
               style: TextButton.styleFrom(
                 backgroundColor: const Color.fromARGB(255, 187, 218, 231),
                 padding: const EdgeInsets.symmetric(
