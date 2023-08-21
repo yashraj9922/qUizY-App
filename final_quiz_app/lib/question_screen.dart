@@ -56,7 +56,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
             ...currentQuestion.getShuffledAnswers().map((item) {
               return AnswerButton(
                 item,
-                onTap:(){
+                onTap: () {
                   answeringQuestion(item);
                 },
               ); //converting list of String TO AnswerButton widget
