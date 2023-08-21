@@ -1,6 +1,7 @@
 // This is main Widget which manages the whole quiz
 import 'package:final__quiz_app/data/questions.dart';
 import 'package:final__quiz_app/question_screen.dart';
+import 'package:final__quiz_app/results_screen.dart';
 import 'package:final__quiz_app/start_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -43,7 +44,7 @@ class _QuizState extends State<Quiz> {
       setState(() {
         selectedAnswers =
             []; //once we are exhausted with the questions resetting the list to empty list
-        activeScreen = 'start-screen';
+        activeScreen = 'results-screen';
         //need to reset the selectedAnswers list to empty list so that it can be used again
       });
     }
@@ -51,10 +52,15 @@ class _QuizState extends State<Quiz> {
 
   @override
   Widget build(context) {
-    // Widget screenWidget = StartScreen(switchScreen);
-    // if (activeScreen == 'questions-screen') {
-    //   screenWidget = const QuestionScreen();
-    // }
+    Widget screenWidget = StartScreen(switchScreen);
+    if (activeScreen == 'questions-screen') {
+      screenWidget = QuestionScreen(onChooseAnswer: chooseAnswer);
+    }
+
+    if (activeScreen == 'results-screen') {
+      screenWidget = ResultsScreen(selectedAnswer: selectedAnswers);
+    }
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -67,9 +73,10 @@ class _QuizState extends State<Quiz> {
             ),
           ),
           // child: activeScreen,--> init state widget
-          child: activeScreen == 'start-screen'
-              ? StartScreen(switchScreen)
-              : QuestionScreen(onChooseAnswer: chooseAnswer),
+          // child: activeScreen == 'start-screen'
+          //     ? StartScreen(switchScreen)
+          //     : QuestionScreen(onChooseAnswer: chooseAnswer),
+          child: screenWidget,
         ),
       ),
     );
