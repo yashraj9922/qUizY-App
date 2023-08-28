@@ -19,8 +19,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
   var currentQuestionIdx = 0;
 
   void answeringQuestion(String clickedAnswer) {
-    widget.onChooseAnswer(
-        clickedAnswer); //the instance of the widget that the current build function is creating
+    widget.onChooseAnswer(clickedAnswer); //the instance of the widget that the current build function is creating
     setState(() {
       currentQuestionIdx++;
     });
