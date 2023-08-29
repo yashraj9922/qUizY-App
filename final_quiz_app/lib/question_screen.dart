@@ -57,6 +57,7 @@ class _QuestionScreenState extends State<QuestionScreen> { // State class
             ...currentQuestion.getShuffledAnswers().map((item) {
               return AnswerButton(
                 item,
+                // onTap: answeringQuestion(item ), //onTap is a function that takes no arguments and returns void hence create anonomus function
                 onTap: () {
                   answeringQuestion(item);
                 },
