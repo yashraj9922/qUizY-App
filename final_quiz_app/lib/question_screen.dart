@@ -3,7 +3,7 @@ import 'package:final__quiz_app/data/questions.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class QuestionScreen extends StatefulWidget {
+class QuestionScreen extends StatefulWidget { // Widget class
   const QuestionScreen({super.key, required this.onChooseAnswer});
 
   final void Function(String clickedAnswer) onChooseAnswer;
@@ -15,11 +15,12 @@ class QuestionScreen extends StatefulWidget {
   }
 }
 
-class _QuestionScreenState extends State<QuestionScreen> {
+class _QuestionScreenState extends State<QuestionScreen> { // State class
   var currentQuestionIdx = 0;
 
   void answeringQuestion(String clickedAnswer) {
     widget.onChooseAnswer(clickedAnswer); //the instance of the widget that the current build function is creating
+    // widget.Function(from Widget class) --> widget. property is build in State class and use to access properties of widget class 
     setState(() {
       currentQuestionIdx++;
     });
