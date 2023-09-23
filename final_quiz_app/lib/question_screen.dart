@@ -21,8 +21,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
   var currentQuestionIdx = 0;
 
   void answeringQuestion(String clickedAnswer) {
-    widget.onChooseAnswer(
-        clickedAnswer); //the instance of the widget that the current build function is creating
+    widget.onChooseAnswer(clickedAnswer);
+    //the instance of the widget that the current build function is creating
     // widget.Function(from Widget class) --> widget. property is build in State class and use to access properties of widget class
     setState(() {
       currentQuestionIdx++;
@@ -34,8 +34,8 @@ class _QuestionScreenState extends State<QuestionScreen> {
     var currentQuestion = questions[currentQuestionIdx];
 
     return SizedBox(
-      width: double
-          .infinity, //use as much width as u can..be as much wide as possible
+      width: double.infinity,
+      //use as much width as u can..be as much wide as possible
       child: Container(
         margin: const EdgeInsets.all(40),
         child: Column(
